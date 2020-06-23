@@ -1,0 +1,89 @@
+
+
+@mixin flex1 {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+}
+
+@mixin image-width($width1) {
+   max-width: $width1;
+  
+   
+}
+@mixin grid-width768 {
+   @include image-width(100%);
+   display:grid;
+   grid-auto-flow: column;
+   grid-template-rows: 1fr 1fr 1fr;
+}
+@mixin background-img123($url1) {
+   background-image:url("#{$url1}");
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   background-size: 100% 100%;
+   height:200px;
+
+}
+
+nav {
+
+   @include flex1;
+
+    img {
+       @include image-width(106px);
+       background-color:#f42;
+       height:48px;
+       
+       
+   }
+   div {
+      margin-left:auto;
+      align-self:center;
+   }
+}
+.fa-search {
+   color:grey;
+   width:2rem;
+}
+.after-nav {
+   @include image-width(100%);
+   background-color: yellow;
+   height:40px;
+   text-align:center;
+   padding-top:1rem;
+   font-size: smaller;
+}
+.img-grid1 {
+@include grid-width768;
+   
+ div:first-child {
+    @include background-img123("/trump.png");
+    
+   }
+   div:nth-child(2){
+      @include background-img123("/auto.png");
+   }
+ div:last-child{
+    @include background-img123("/auto.png");
+   }
+   &  p {
+      text-align:center;
+      color:white;
+      
+   }
+
+}
+
+.latest-news {
+  
+   @include flex1;
+   span {
+      align-self:center;
+      margin-left:0.5rem;
+      margin-top:0.2rem;
+   }
+   h3 {
+      align-self:flex-end;
+   }
+}
