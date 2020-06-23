@@ -12,11 +12,8 @@
    
 }
 @mixin grid-width768($x,$y) {
-  
-   // @include row-grid; 
-   @include image-width(100%);
+  @include image-width(100%);
    display:grid;
-   // grid-auto-flow: column;
    grid-template-rows: repeat($x,1fr);
    grid-template-columns:repeat($y,200px);
 }
@@ -36,20 +33,46 @@
 // @mixin row-grid {
 //    grid-template-column:repeat(auto-fit,minmax(200px,1fr));
 // }
-@mixin media768 {
-   @media screen and (max-width:767px){
-      ul {
+
+   @media screen and (max-width:768px){
+      // .nav-pre {
+        
+        
+         
+         
+      //    color:#fff;
+         
+        
+         
+      // }
+      .nav-pre ul:first-child {
+          
+   
+            display:inline-flex;
+            position:relative;
+            list-style:none;
+            font-size:0.8rem;
+            li{
+              
+               margin:auto 1rem;
+             }
+      }
+      .nav-pre ul:last-child {
          display:none;
       }
+      nav ul {
+         display:none;
+      }
+      
    }
-}
+
+
 
 nav {
 
    @include flex1;
-   @include media768;
-
-    img {
+  
+   img {
        @include image-width(106px);
        background-color:#f42;
        height:48px;
@@ -77,7 +100,7 @@ nav {
 }
 .img-grid1 {
 @include grid-width768($x:3,$y:0);
-// img{;}
+
    
  div:first-child {
     @include background-img123("/trump.png");
@@ -85,11 +108,13 @@ nav {
    }
    div:nth-child(2){
       @include background-img123("/auto.png");
-      // height:400px;
+      
+      
    }
  div:last-child{
     @include background-img123("/auto.png");
-   //  height:400px;
+   
+    
    }
    &  p {
       text-align:center;
@@ -123,22 +148,42 @@ nav {
   }
    
 }
-@media screen and (min-width:768px) {
+.nav-pre {
+   @include flex1;
+   background-color:black;
+   color:#fff;
+}
 ul {
  
-   // @include flex1;
+   
    display:inline-flex;
    position:relative;
    list-style:none;
    font-size:0.8rem;
+
    li{
      
       margin:auto 1rem;
      
     
    }
-
 }
+@media screen and (min-width:768px) {
+   nav {
+      img:first-child,.fa-bars{
+         display:none;
+      }
+   
+   }
+
+
+
+.nav-pre { 
+   ul:last-child {
+      margin-left:auto;
+}
+}
+
 .img-grid1 {
    @include grid-width-max768;
    height:auto;
@@ -153,3 +198,4 @@ ul {
    }
 }
 }
+
