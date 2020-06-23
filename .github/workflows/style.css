@@ -11,6 +11,12 @@ nav {
           justify-content: flex-start;
 }
 
+@media screen and (max-width: 767px) {
+  nav ul {
+    display: none;
+  }
+}
+
 nav img {
   max-width: 106px;
   background-color: #f42;
@@ -42,9 +48,10 @@ nav div {
   max-width: 100%;
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: column;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-columns: (200px)[0];
+      grid-template-columns: repeat(0, 200px);
 }
 
 .img-grid1 div:first-child {
@@ -52,7 +59,7 @@ nav div {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
-  height: 200px;
+  height: 400px;
 }
 
 .img-grid1 div:nth-child(2) {
@@ -60,7 +67,6 @@ nav div {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
-  height: 200px;
 }
 
 .img-grid1 div:last-child {
@@ -68,7 +74,6 @@ nav div {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
-  height: 200px;
 }
 
 .img-grid1 p {
@@ -100,5 +105,68 @@ nav div {
 .latest-news h3 {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.img-grid2 {
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  -ms-grid-columns: (200px)[2];
+      grid-template-columns: repeat(2, 200px);
+}
+
+.img-grid2 img {
+  width: 200px;
+}
+
+.img-grid2 div a p:first-child {
+  text-align: center;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  ul {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    list-style: none;
+    font-size: 0.8rem;
+  }
+  ul li {
+    margin: auto 1rem;
+  }
+  .img-grid1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 200px 200px;
+        grid-template-rows: 200px 200px;
+    height: auto;
+  }
+  .img-grid1 div:first-child {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/3/2;
+  }
+  .img-grid1 div:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1/2/2/3;
+  }
+  .img-grid1 div:last-child {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 2/2/3/3;
+  }
 }
 /*# sourceMappingURL=style.css.map */
