@@ -220,10 +220,13 @@ ul {
 }
 }
 .latest-fundings {
+   // display:flex;
+   // flex-direction:row;;
    @include flex1;
-   
+
    .anchor{
       display:inline-flex;
+      margin-left:25%;
       span{
          // display:inline;
          // position:relative;
@@ -240,12 +243,56 @@ ul {
   
    
    .high-five{
-      // margin-left:auto;
+      margin-left:auto;
+      margin-right:25%;
       display:inline-flex;                
       h5{
          position:relative;
-         margin-left:1rem;
+         margin-left:0.5rem;
+         border-right:5px thin orange;
    }
    
 }
 
+.row {
+   clear: both;
+   display: flex;
+   flex-wrap: wrap;
+   // margin:auto 25%;
+   img{
+      width:15%;
+   }
+}
+.col-md-3 {
+   box-sizing: border-box;
+   // flex: 1 1 10%;
+   padding: 0 2px;
+   max-width: 25%;
+}
+.fundings {
+   background: #fffaf8;
+   position: relative;
+}
+.name {
+   background: #f42;
+   color: white;
+   font-family: "Roboto", sans-serif;
+   font-size: 18px;
+   padding: 11px 16px 11px 84px;
+}
+.funds {
+   background: rgba(255, 68, 34, 0.08);
+   color: black;
+   margin: 0;
+   padding: 11px 16px 11px 84px;
+}
+.fa-tags::before {
+   content: "\f02c";
+}
+.fa-briefcase::before {
+   content: "\f0b1";
+}
+.funds-para {
+   border-top: 1px solid rgba(255, 68, 34, 0.25);
+   padding: 16px;
+}
