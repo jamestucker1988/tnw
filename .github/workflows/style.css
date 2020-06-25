@@ -16,6 +16,56 @@
   nav ul {
     display: none;
   }
+  .img-grid2 {
+    margin: auto 0;
+  }
+  .img-grid2 div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .img-grid2 div div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 250px;
+            flex: 1 1 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .img-grid2 div div a:first-child {
+    padding-left: 2rem;
+    width: 80%;
+    color: red;
+  }
+  .img-grid2 div div a:nth-child(2) {
+    position: relative;
+    padding-left: 2rem;
+    color: grey;
+    font-size: 0.7rem;
+  }
+  .img-grid2 div div p {
+    display: inline-block;
+  }
+  .img-grid2 div img {
+    width: 250px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 250px;
+            flex: 1 1 250px;
+  }
 }
 
 nav {
@@ -32,7 +82,7 @@ nav {
 }
 
 nav img {
-  max-width: 106px;
+  width: 106px;
   background-color: #f42;
   height: 48px;
 }
@@ -50,7 +100,7 @@ nav div {
 }
 
 .after-nav {
-  max-width: 100%;
+  width: 100%;
   background-color: yellow;
   height: 40px;
   text-align: center;
@@ -59,7 +109,7 @@ nav div {
 }
 
 .img-grid1 {
-  max-width: 100%;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[3];
@@ -121,25 +171,6 @@ nav div {
       align-self: flex-end;
 }
 
-.img-grid2 {
-  max-width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
-  -ms-grid-columns: (200px)[2];
-      grid-template-columns: repeat(2, 200px);
-}
-
-.img-grid2 img {
-  width: 200px;
-}
-
-.img-grid2 div a p:first-child {
-  text-align: center;
-  width: 50%;
-}
-
 .nav-pre {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,6 +202,22 @@ ul li {
 @media screen and (min-width: 768px) {
   nav img:first-child, nav .fa-bars {
     display: none;
+  }
+  .img-grid2 {
+    margin: auto 25%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    -ms-grid-rows: 250px 250px;
+        grid-template-rows: 250px 250px;
+  }
+  .img-grid2 div img {
+    width: 200px;
+  }
+  .img-grid2 div a {
+    text-align: center;
+    width: 50%;
   }
   .nav-pre ul:last-child {
     margin-left: auto;
@@ -205,5 +252,35 @@ ul li {
     -ms-grid-column-span: 1;
     grid-area: 2/2/3/3;
   }
+}
+
+.latest-fundings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.latest-fundings .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.high-five {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.high-five h5 {
+  position: relative;
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

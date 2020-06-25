@@ -7,7 +7,7 @@
 }
 
 @mixin image-width($width1) {
-   max-width: $width1;
+   width: $width1;
   
    
 }
@@ -29,22 +29,8 @@
    background-size: 100% 100%;
    
 
-}
-// @mixin row-grid {
-//    grid-template-column:repeat(auto-fit,minmax(200px,1fr));
-// }
-
-   @media screen and (max-width:768px){
-      // .nav-pre {
-        
-        
-         
-         
-      //    color:#fff;
-         
-        
-         
-      // }
+}   @media screen and (max-width:768px){
+     
       .nav-pre ul:first-child {
           
    
@@ -62,6 +48,39 @@
       }
       nav ul {
          display:none;
+      }
+      .img-grid2 {
+      & div {
+         @include flex1;
+         
+      div{
+       flex:1 1 250px;
+         display:flex;
+         flex-direction:column;
+         justify-content:center;
+         a:first-child {
+            padding-left:2rem;
+            @include image-width($width1:80%);
+            color:red;
+         }
+         a:nth-child(2) {
+            position:relative;
+            padding-left:2rem;
+            color:grey;
+            font-size:0.7rem;
+         }
+         p{
+            display:inline-block;
+
+         }
+         
+      }}   
+         & div img {@include image-width($width1:250px);
+            flex:1 1 250px;
+         }
+         margin: auto 0;
+        
+
       }
       
    }
@@ -136,18 +155,7 @@ nav {
       align-self:flex-end;
    }
 }
-.img-grid2 {
-   @include grid-width768($x:4,$y:2);
-  img {
-     width:200px;
-  }
-  div a p:first-child {
-     text-align: center;
-     width:50%;
 
-  }
-   
-}
 .nav-pre {
    @include flex1;
    background-color:black;
@@ -175,7 +183,20 @@ ul {
       }
    
    }
-
+   .img-grid2 {
+   
+      & div img {@include image-width($width1:200px);}
+      margin:auto 25%;
+     display:grid;
+     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+     grid-template-rows:250px 250px;
+     div a {
+        text-align: center;
+        width:50%;
+   
+     }
+      
+   }
 
 
 .nav-pre { 
@@ -197,5 +218,34 @@ ul {
       grid-area:2/2/3/3;
    }
 }
+}
+.latest-fundings {
+   @include flex1;
+   
+   .anchor{
+      display:inline-flex;
+      span{
+         // display:inline;
+         // position:relative;
+         // margin-top:0.8rem !important;
+  
+      }
+          }
+      // h3 a {
+      //    // position:relative;
+      //    // text-align:center;
+      // }
+      
+   }
+  
+   
+   .high-five{
+      // margin-left:auto;
+      display:inline-flex;                
+      h5{
+         position:relative;
+         margin-left:1rem;
+   }
+   
 }
 
