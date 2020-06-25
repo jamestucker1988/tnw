@@ -271,9 +271,12 @@ ul li {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  margin-left: 25%;
 }
 
 .high-five {
+  margin-left: auto;
+  margin-right: 25%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -281,6 +284,60 @@ ul li {
 
 .high-five h5 {
   position: relative;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
+  border-right: 5px thin orange;
+}
+
+.row {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.row img {
+  width: 15%;
+}
+
+.col-md-3 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 2px;
+  max-width: 25%;
+}
+
+.fundings {
+  background: #fffaf8;
+  position: relative;
+}
+
+.name {
+  background: #f42;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 11px 16px 11px 84px;
+}
+
+.funds {
+  background: rgba(255, 68, 34, 0.08);
+  color: black;
+  margin: 0;
+  padding: 11px 16px 11px 84px;
+}
+
+.fa-tags::before {
+  content: "\f02c";
+}
+
+.fa-briefcase::before {
+  content: "\f0b1";
+}
+
+.funds-para {
+  border-top: 1px solid rgba(255, 68, 34, 0.25);
+  padding: 16px;
 }
 /*# sourceMappingURL=style.css.map */
