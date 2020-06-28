@@ -246,24 +246,15 @@ ul {
 }
 }
 .latest-fundings {
-   // display:flex;
-   // flex-direction:row;;
+  
    @include flex1;
 
    .anchor{
       display:inline-flex;
       margin-left:25%;
-      span{
-         // display:inline;
-         // position:relative;
-         // margin-top:0.8rem !important;
-  
-      }
+     
           }
-      // h3 a {
-      //    // position:relative;
-      //    // text-align:center;
-      // }
+     
       
    }
   
@@ -291,7 +282,7 @@ ul {
 }
 .tech{
    display:flex;
-   justify-content: space-around;
+   justify-content: space-between;
    margin:auto 25%;
    
 }
@@ -311,7 +302,7 @@ ul {
    box-sizing: border-box;
    display:flex;
    flex-direction: column;
-   
+   margin:auto 1%;
 }
 .md-4 {
    justify-content:center;
@@ -356,12 +347,13 @@ ul {
    padding: 16px;
 }
 .section1 { 
-   border:1px solid yellow;
+   // border:1px solid yellow;
    // flex:1 1 auto;
    display:grid;
    grid-template-columns: 2fr 1fr;
    grid-template-rows: 1fr;
-  width:95%;
+   // column-gap:0.5rem;
+//   width:95%;
   font-size:1rem;
   background-color:pink;
    p{
@@ -393,8 +385,28 @@ ul {
 }
 }
 .back-img {
+   flex:1 1 160px;
    background-image:url("/image1.jpeg") ;
    background-repeat: no-repeat;
    background-position: center center;
    background-size: 100% 100%;
+   p{
+      color:#fff;
+      
+   }
+   p:nth-child(3){
+      font-size:0.8rem;
+      color:grey;
+   }
+}
+.fa-circle{
+   font-size: 0.4rem;
+   color:#f42;
+}
+.lorem {
+   font-size:0.8rem;
+   color:grey;
+}
+.underline {
+   border-bottom:2px solid hsla(0,0%,50%,0.2);
 }
