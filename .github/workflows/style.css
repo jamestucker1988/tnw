@@ -494,6 +494,10 @@ ul li {
   color: #fff;
 }
 
+.back-img p:nth-child(2) {
+  font-size: 1.2;
+}
+
 .back-img p:nth-child(3) {
   font-size: 0.8rem;
   color: grey;
@@ -511,5 +515,10 @@ ul li {
 
 .underline {
   border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+}
+
+.apps-gear-tech {
+  font-size: 1.5rem;
+  color: #f42;
 }
 /*# sourceMappingURL=style.css.map */
