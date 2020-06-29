@@ -1,4 +1,8 @@
 @media screen and (max-width: 768px) {
+  .visible2 {
+    display: none;
+    visibility: collapse;
+  }
   .tech {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -242,6 +246,9 @@ ul li {
 }
 
 @media screen and (min-width: 768px) {
+  .visible2 {
+    visibility: hidden;
+  }
   nav img:first-child, nav .fa-bars {
     display: none;
   }
@@ -519,6 +526,50 @@ ul li {
 
 .apps-gear-tech {
   font-size: 1.5rem;
+  display: inline-block;
   color: #f42;
+}
+
+.fa-angle {
+  font-size: 0.8rem;
+  margin-left: 2rem;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1.5rem;
+}
+
+.social-links i {
+  margin-left: 1.5rem;
+}
+
+.social-links a {
+  margin-left: 0.8rem;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+
+.margin-social {
+  font-size: 2rem;
+}
+
+.foot-img {
+  background-color: black;
+  width: 3%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
