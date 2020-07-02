@@ -30,6 +30,17 @@ $width2:768px;
    
 
 }   @media screen and (max-width:768px){
+   .latest-news {
+      margin-left:0rem;
+      font-size:1.2rem;
+      color:#f42;
+      @include flex1;
+      span {
+         align-self:center;
+         margin-left:0.5rem;
+         margin-top:0.2rem;
+      }
+   }
    .visible2 {
     display:none;
     visibility:collapse;
@@ -91,17 +102,18 @@ $width2:768px;
          a:first-child {
             padding-left:2rem;
             @include image-width($width1:80%);
-            color:red;
+            text-decoration: none;
          }
          a:nth-child(2) {
             position:relative;
             padding-left:2rem;
             color:grey;
             font-size:0.7rem;
+            text-decoration: none;
          }
          p{
             display:inline-block;
-
+            padding-left:2rem;
          }
          
       }}   
@@ -173,18 +185,7 @@ nav {
 
 }
 
-.latest-news {
-  
-   @include flex1;
-   span {
-      align-self:center;
-      margin-left:0.5rem;
-      margin-top:0.2rem;
-   }
-   h3 {
-      align-self:flex-end;
-   }
-}
+
 
 .nav-pre {
    @include flex1;
@@ -207,6 +208,20 @@ ul {
    }
 }
 @media screen and (min-width:768px) {
+   .latest-news {
+  color:#f42;
+  font-size:1.2rem;
+      @include flex1;
+      span {
+         align-self:center;
+         margin-left:0.5rem;
+         margin-top:0.2rem;
+      }
+      h3 {
+         align-self:flex-end;
+         margin-left:25%;
+      }
+   }
    .visible2 {
    //   display:none;
       visibility:hidden;
@@ -227,8 +242,10 @@ ul {
      grid-template-rows:250px 250px;
      div a {
         text-align: center;
-        width:50%;
-   
+        width:45%;
+        text-decoration:none;
+       color:black;
+       font-weight:800;
      }
       
    }
