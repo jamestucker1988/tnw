@@ -151,17 +151,17 @@ nav {
 @include grid-width768($x:3,$y:0);
 
    
- div:first-child {
+ .img-grid1-div1 {
     @include background-img123("/trump.png");
     height:400px;
    }
-   div:nth-child(2){
+   .img-grid1-div2{
       @include background-img123("/auto.png");
       
       
    }
- div:last-child{
-    @include background-img123("/auto.png");
+   .img-grid1-div3{
+      @include background-img123("/auto.png");
    
     
    }
@@ -242,9 +242,12 @@ ul {
 
 .img-grid1 {
    @include grid-width-max768;
+   position:relative;
    height:auto;
    div:first-child {
       grid-area: 1/1/3/2;
+      
+        
    }
    div:nth-child(2) {
       grid-area:1/2/2/3;
@@ -296,7 +299,7 @@ ul {
    
 }
 
-.col {
+@mixin col {
    display:flex;
    flex-direction:column;
   
@@ -454,3 +457,41 @@ footer {
    display:flex;
    justify-content: center;
 }
+.tnw-image {
+   @include image-width(35%);
+}
+.img-grid1-div1 {
+   span{
+      float:right;
+      color:#fff;
+   }
+ .politics {
+      @include col;
+      justify-content:flex-end;
+      align-items:flex-start;
+      padding-top:9.5rem;
+    
+      a:nth-child(1){
+         font-size:2.5rem;
+         text-decoration: none;
+         color:#fff;
+      }
+      a:last-child {
+         font-size:0.8rem;
+         text-decoration: none;
+         color:#fff;
+      }
+   }
+   }
+.img-grid1-div2,.img-grid1-div3 {
+   position:relative;
+   a{
+      position:absolute;
+      text-decoration: none;
+      color:#fff;
+      font-size:2rem; 
+      top:60%;
+     
+   }
+}
+

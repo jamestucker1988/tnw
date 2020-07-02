@@ -1,4 +1,26 @@
 @media screen and (max-width: 768px) {
+  .latest-news {
+    margin-left: 0rem;
+    font-size: 1.2rem;
+    color: #f42;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .latest-news span {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+  }
   .visible2 {
     display: none;
     visibility: collapse;
@@ -95,16 +117,18 @@
   .img-grid2 div div a:first-child {
     padding-left: 2rem;
     width: 80%;
-    color: red;
+    text-decoration: none;
   }
   .img-grid2 div div a:nth-child(2) {
     position: relative;
     padding-left: 2rem;
     color: grey;
     font-size: 0.7rem;
+    text-decoration: none;
   }
   .img-grid2 div div p {
     display: inline-block;
+    padding-left: 2rem;
   }
   .img-grid2 div img {
     width: 250px;
@@ -191,32 +215,6 @@ nav div {
   color: white;
 }
 
-.latest-news {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.latest-news span {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-left: 0.5rem;
-  margin-top: 0.2rem;
-}
-
-.latest-news h3 {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
 .nav-pre {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,6 +244,32 @@ ul li {
 }
 
 @media screen and (min-width: 768px) {
+  .latest-news {
+    color: #f42;
+    font-size: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .latest-news span {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+  }
+  .latest-news h3 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-left: 25%;
+  }
   .visible2 {
     visibility: hidden;
   }
@@ -266,7 +290,10 @@ ul li {
   }
   .img-grid2 div a {
     text-align: center;
-    width: 50%;
+    width: 45%;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
   }
   .nav-pre ul:last-child {
     margin-left: auto;
@@ -612,6 +639,5 @@ footer {
   color: #fff;
   font-size: 2rem;
   top: 60%;
-  vertical-align: bottom;
 }
 /*# sourceMappingURL=style.css.map */
