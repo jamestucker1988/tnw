@@ -164,7 +164,7 @@ nav div {
       grid-template-columns: repeat(0, 200px);
 }
 
-.img-grid1 div:first-child {
+.img-grid1 .img-grid1-div1 {
   background-image: url("/trump.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -172,14 +172,14 @@ nav div {
   height: 400px;
 }
 
-.img-grid1 div:nth-child(2) {
+.img-grid1 .img-grid1-div2 {
   background-image: url("/auto.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
 }
 
-.img-grid1 div:last-child {
+.img-grid1 .img-grid1-div3 {
   background-image: url("/auto.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -278,6 +278,7 @@ ul li {
         grid-template-columns: 2fr 1fr;
     -ms-grid-rows: 200px 200px;
         grid-template-rows: 200px 200px;
+    position: relative;
     height: auto;
   }
   .img-grid1 div:first-child {
@@ -358,16 +359,6 @@ ul li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: auto 25%;
-}
-
-.col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .col-md-3 {
@@ -571,5 +562,56 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.tnw-image {
+  width: 35%;
+}
+
+.img-grid1-div1 span {
+  float: right;
+  color: #fff;
+}
+
+.img-grid1-div1 .politics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 9.5rem;
+}
+
+.img-grid1-div1 .politics a:nth-child(1) {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.img-grid1-div1 .politics a:last-child {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.img-grid1-div2, .img-grid1-div3 {
+  position: relative;
+}
+
+.img-grid1-div2 a, .img-grid1-div3 a {
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  top: 60%;
+  vertical-align: bottom;
 }
 /*# sourceMappingURL=style.css.map */
