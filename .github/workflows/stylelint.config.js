@@ -1,7 +1,8 @@
 "use strict"
 
 module.exports = {
-    "extends": "stylelint-config-recommended",
+    "extends": "stylelint-config-recommended", "extends":"stylelint-config-recommended-scss",
+    
     "rules": {
         "at-rule-empty-line-before": ["always", {
             except: [
@@ -105,6 +106,9 @@ module.exports = {
         "value-list-comma-space-after": "always-single-line",
         "value-list-comma-space-before": "never",
         "value-list-max-empty-lines": 0,
+        
     },
-    ignoreAtRules: ['function', 'if','include','mixin']
+    
+        
+      
 }
