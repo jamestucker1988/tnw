@@ -140,6 +140,14 @@
         -ms-flex: 1 1 250px;
             flex: 1 1 250px;
   }
+  .col-md-3 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .name {
+    text-align: center;
+  }
 }
 
 .img-grid1 ul {
@@ -390,6 +398,14 @@ nav img {
     -ms-grid-column-span: 1;
     grid-area: 2/2/3/3;
   }
+  .col-md-3 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 25%;
+            flex: 1 1 25%;
+  }
+  .row {
+    margin: auto 20%;
+  }
 }
 
 .row {
@@ -401,7 +417,6 @@ nav img {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: auto 20%;
 }
 
 .row img {
@@ -421,9 +436,6 @@ nav img {
 .col-md-3 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
   padding: 0 2px;
   color: #fff;
   text-decoration: none;

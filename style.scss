@@ -185,6 +185,14 @@ $width2: 768px;
 
     margin: auto 0;
   }
+
+  .col-md-3 {
+    flex: 1 1 100%;
+  }
+
+  .name {
+    text-align: center;
+  }
 }
 
 .img-grid1 ul {
@@ -428,6 +436,12 @@ nav {
       grid-area: 2/2/3/3;
     }
   }
+  .col-md-3 {
+    flex: 1 1 25%;
+  }
+  .row {
+    margin: auto 20%;
+  }
 }
 
 .row {
@@ -435,7 +449,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: auto 20%;
+  // margin: auto 20%;
 
   img {
     width: 15%;
@@ -450,7 +464,7 @@ nav {
 
 .col-md-3 {
   box-sizing: border-box;
-  flex: 1 1 25%;
+  // flex: 1 1 25%;
   padding: 0 2px;
   color: #fff;
   text-decoration: none;
