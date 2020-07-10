@@ -33,34 +33,9 @@
     font-size: 18px;
     padding: 11px 16px 11px 84px;
   }
-  .latest-news {
-    position: relative;
-    margin-left: 0;
-    font-size: 0.8rem;
-    color: #f42;
-    text-decoration: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .latest-news span {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin-left: 0.5rem;
-    margin-top: 0.2rem;
-  }
   .latest-news1 + .high-five {
-    position: absolute;
-    padding-top: 5rem;
-    display: inline;
+    position: relative;
+    display: block;
     color: red;
   }
   .latest-news1 + .high-five h5:nth-child(2),
@@ -205,13 +180,13 @@ nav img {
   color: #fff;
 }
 
-.img-grid1-div1 .img-grid1-div2,
-.img-grid1-div1 .img-grid1-div3 {
+.img-grid1-div2,
+.img-grid1-div3 {
   position: relative;
 }
 
-.img-grid1-div1 .img-grid1-div2 a,
-.img-grid1-div1 .img-grid1-div3 a {
+.img-grid1-div2 a,
+.img-grid1-div3 a {
   position: absolute;
   text-decoration: none;
   color: #fff;
@@ -219,7 +194,7 @@ nav img {
   top: 60%;
 }
 
-.img-grid1-div1 .img-grid1 {
+.img-grid1 {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -229,7 +204,7 @@ nav img {
       grid-template-columns: repeat(0, 200px);
 }
 
-.img-grid1-div1 .img-grid1 .img-grid1-div1 {
+.img-grid1 .img-grid1-div1 {
   background-image: url("/trump.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -237,38 +212,60 @@ nav img {
   height: 400px;
 }
 
-.img-grid1-div1 .img-grid1 .img-grid1-div2 {
+.img-grid1 .img-grid1-div2 {
   background-image: url("./auto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
 
-.img-grid1-div1 .img-grid1 .img-grid1-div3 {
+.img-grid1 .img-grid1-div3 {
   background-image: url("./auto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
 
-.img-grid1-div1 .img-grid1 p {
+.img-grid1 p {
   text-align: center;
   color: white;
 }
 
 @media screen and (min-width: 768px) {
-  .high-five {
+  .latest-fundings {
+    margin: auto 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .latest-news1 {
+    color: #f42;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  .latest-news1 span {
     -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+  }
+  .high-five {
+    position: relative;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
     margin-left: auto;
-    margin-right: 20%;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
     color: #f42;
   }
   .high-five h5 {
     position: relative;
+    display: inline;
     margin-left: 0.5rem;
   }
   .deals {
@@ -280,54 +277,6 @@ nav img {
         -ms-flex: 1 1 250px;
             flex: 1 1 250px;
     font-size: 0.8rem;
-  }
-  .latest-news1 {
-    color: #f42;
-    font-size: 1.2rem;
-    text-decoration: none;
-    margin-left: 12%;
-    display: inline;
-  }
-  .latest-news1 span {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin-left: 0.5rem;
-    margin-top: 0.2rem;
-  }
-  .latest-news1 h3 {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-left: 20%;
-    width: 100%;
-  }
-  .latest-news {
-    color: #f42;
-    font-size: 1.2rem;
-    text-decoration: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .latest-news span {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin-left: 0.5rem;
-    margin-top: 0.2rem;
-  }
-  .latest-news h3 {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-left: 20%;
-    width: 100%;
   }
   .visible2 {
     visibility: hidden;
@@ -444,7 +393,6 @@ nav img {
 }
 
 .row {
-  padding-top: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
