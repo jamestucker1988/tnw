@@ -194,9 +194,16 @@ $width2: 768px;
   // flex: 1 1 25%;
   padding: 0 2px;
   color: #fff;
-  text-decoration: none;
   background: #fffaf8;
   position: relative;
+
+  a {
+    text-decoration: none;
+
+    li {
+      list-style: none;
+    }
+  }
 }
 
 .name {
@@ -514,8 +521,7 @@ nav {
   border-top: 1px solid rgba(255, 68, 34, 0.25);
   padding: 16px;
 
-  a {
-    text-decoration: none;
+  p {
     color: grey;
   }
 }
