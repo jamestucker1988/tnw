@@ -40,6 +40,7 @@ $width2: 768px;
   .latest-news {
     font-size: 0.8rem;
   }
+
   .back-img {
     p {
       font-size: 1.2rem;
@@ -111,25 +112,12 @@ $width2: 768px;
     display: none;
   }
 
-  nav {
-    display: inline-flex;
-    width: 100%;
-
-    div:nth-child(2) {
-      display: none;
-    }
-
-    .search {
-      margin-left: auto;
-      align-self: center;
-    }
-  }
-
   .img-grid2 {
     & div {
       @include flex1;
 
       margin-bottom: 1rem;
+
       div {
         flex: 1 1 400px;
         display: flex;
@@ -140,6 +128,7 @@ $width2: 768px;
           padding-left: 2rem;
 
           @include image-width($width1: 80%);
+
           color: black;
           text-decoration: none;
         }
@@ -168,6 +157,29 @@ $width2: 768px;
     // margin: 1rem 0;
   }
 
+  nav {
+    display: inline-flex;
+    width: 100%;
+
+    div:nth-child(2) {
+      display: none;
+    }
+
+    .search {
+      margin-left: auto;
+      align-self: center;
+    }
+  }
+
+  .name {
+    text-decoration: none;
+
+    h4 {
+      background-color: #f42;
+      text-align: center;
+    }
+  }
+
   .col-md-3 {
     flex: 1 1 100%;
 
@@ -178,18 +190,22 @@ $width2: 768px;
 }
 
 .col-md-3 {
-  a {
-    text-decoration: none;
-  }
+  box-sizing: border-box;
+  // flex: 1 1 25%;
+  padding: 0 2px;
+  color: #fff;
+  text-decoration: none;
+  background: #fffaf8;
+  position: relative;
+}
 
-  .name {
-    // text-align: center;
-    background: #f42;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    padding: 11px 16px 11px 84px;
-  }
+.name {
+  // text-align: center;
+  background: #f42;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 11px 16px 11px 84px;
 }
 
 .img-grid1 ul {
@@ -324,6 +340,13 @@ nav {
     visibility: hidden;
   }
 
+  .md-4 a {
+    max-width: 90%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+  }
+
   nav {
     display: inline-flex;
     width: 100%;
@@ -341,7 +364,6 @@ nav {
 
     .search {
       margin-left: auto;
-
       align-self: center;
     }
 
@@ -351,18 +373,13 @@ nav {
     }
   }
 
-  .md-4 a {
-    max-width: 90%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    text-decoration: none;
-  }
-
   .img-grid2 {
     width: inherit;
+
     div {
       margin-right: 1rem;
     }
+
     & div img {
       @include image-width($width1: 100%);
     }
@@ -458,16 +475,6 @@ nav {
   justify-content: space-between;
 }
 
-.col-md-3 {
-  box-sizing: border-box;
-  // flex: 1 1 25%;
-  padding: 0 2px;
-  color: #fff;
-  text-decoration: none;
-  background: #fffaf8;
-  position: relative;
-}
-
 .col-md-4 {
   box-sizing: border-box;
   display: flex;
@@ -513,10 +520,34 @@ nav {
   }
 }
 
-.funds-meta {
-  i + span {
-    text-decoration: none;
-    color: grey;
+.latest-news {
+  position: relative;
+  color: #f42;
+  text-decoration: none;
+
+  @include flex1;
+
+  span {
+    align-self: center;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+
+  i {
+    margin-left: 2rem;
+    font-size: 2rem;
+  }
+
+  a {
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-top: -1rem;
   }
 }
 
@@ -524,7 +555,6 @@ nav {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
-
   font-size: 1rem;
   background-color: pink;
 
@@ -543,12 +573,49 @@ nav {
 
   img {
     grid-column: 2/3;
-
     object-fit: cover;
     width: 100%;
     height: 100%;
     grid-row: 1/3;
   }
+}
+
+.funds-meta li a {
+  text-decoration: none;
+}
+
+.latest-deal {
+  position: relative;
+  font-size: 0.8rem;
+  color: #f42;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  span {
+    align-self: center;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+  }
+
+  .margin-social {
+    margin-bottom: 2rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.funds-meta {
+  i + span {
+    text-decoration: none;
+    color: grey;
+  }
+
+  display: inline-block;
+  right: 3rem;
 }
 
 .back-img {
@@ -598,31 +665,6 @@ nav {
   margin-left: 0.5rem;
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-
-  i {
-    margin-left: 2rem;
-    font-size: 2rem;
-  }
-
-  a {
-    margin-left: 1rem;
-    font-size: 1rem;
-    margin-top: -1rem;
-  }
-}
-
-.margin-social {
-  margin-bottom: 2rem;
-
-  a {
-    text-decoration: none;
-  }
-}
-
 .foot-img {
   background-color: black;
   width: 5%;
@@ -630,8 +672,6 @@ nav {
 
 .tnw-image {
   @include image-width(35%);
-  // z-index: 1;
-  // position: absolute;
 }
 
 .tint {
@@ -641,14 +681,6 @@ nav {
 
 .trump {
   position: relative;
-}
-.funds-meta {
-  display: inline-block;
-  right: 3rem;
-
-  li a {
-    text-decoration: none;
-  }
 }
 
 .politics {
@@ -674,9 +706,11 @@ nav {
 .fa-tags {
   color: black;
 }
+
 .fa-briefcase {
   color: black;
 }
+
 .back-col {
   background: #555;
 
@@ -700,54 +734,14 @@ footer {
   color: red;
 }
 
-.name {
-  text-decoration: none;
-
-  h4 {
-    background-color: #f42;
-    text-align: center;
-  }
-}
-
 .none {
   display: none;
 }
 
-.latest-news {
-  position: relative;
-  color: #f42;
+.deals {
   text-decoration: none;
-
-  @include flex1;
-
-  span {
-    align-self: center;
-    margin-left: 0.5rem;
-    margin-top: 0.2rem;
-  }
-}
-
-.latest-deal {
-  position: relative;
-  font-size: 0.8rem;
+  align-self: center;
+  margin-left: auto;
   color: #f42;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  span {
-    align-self: center;
-    margin-left: 0.5rem;
-    margin-top: 0.2rem;
-  }
-
-  .deals {
-    text-decoration: none;
-    align-self: center;
-    margin-left: auto;
-
-    color: #f42;
-    // margin-top: 0.2rem;
-  }
+  // margin-top: 0.2rem;
 }
