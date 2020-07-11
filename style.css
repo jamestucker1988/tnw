@@ -219,7 +219,7 @@ nav img {
 }
 
 .img-grid1 .img-grid1-div1 {
-  background-image: url("/trump.png");
+  background: url("./trump.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -227,14 +227,14 @@ nav img {
 }
 
 .img-grid1 .img-grid1-div2 {
-  background-image: url("./auto.png");
+  background: url("./auto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
 
 .img-grid1 .img-grid1-div3 {
-  background-image: url("./auto.png");
+  background: url("./auto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -550,7 +550,7 @@ nav img {
 
 .back-img {
   width: 100%;
-  background-image: url("./image1.jpeg");
+  background: url("./image1.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -631,6 +631,16 @@ nav img {
 
 .tnw-image {
   width: 35%;
+}
+
+.tint {
+  background: -webkit-gradient(linear, right top, left top, from(#f42), color-stop(50%, orange));
+  background: linear-gradient(to left, #f42, orange 50%);
+  z-index: 1;
+}
+
+.trump {
+  position: relative;
 }
 
 .funds-meta {

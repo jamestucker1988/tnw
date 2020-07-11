@@ -30,7 +30,7 @@ $width2: 768px;
 }
 
 @mixin background-img123($url1) {
-  background-image: url("#{$url1}");
+  background: url("#{$url1}");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -251,9 +251,10 @@ nav {
   @include grid-width768($x: 3, $y: 0);
 
   .img-grid1-div1 {
-    @include background-img123("/trump.png");
+    @include background-img123("./trump.png");
 
     height: 400px;
+    // background: linear-gradient(to left, #ebf);
   }
 
   .img-grid1-div2 {
@@ -629,8 +630,18 @@ nav {
 
 .tnw-image {
   @include image-width(35%);
+  // z-index: 1;
+  // position: absolute;
 }
 
+.tint {
+  background: linear-gradient(to left, #f42, orange 50%);
+  z-index: 1;
+}
+
+.trump {
+  position: relative;
+}
 .funds-meta {
   display: inline-block;
   right: 3rem;
