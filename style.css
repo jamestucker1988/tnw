@@ -23,15 +23,8 @@
         align-self: flex-start;
     width: 100%;
   }
-  .deals {
-    padding-left: auto;
-  }
-  .name {
-    background: #f42;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    padding: 11px 16px 11px 84px;
+  .latest-deal {
+    margin: auto auto;
   }
   .latest-news1 + .high-five {
     position: relative;
@@ -55,7 +48,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 0.8rem;
-    margin: auto 5%;
+    margin: 0;
   }
   .tech img {
     -webkit-box-flex: 1;
@@ -145,9 +138,21 @@
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
   }
-  .name {
+  .col-md-3 .name {
     text-align: center;
   }
+}
+
+.col-md-3 a {
+  text-decoration: none;
+}
+
+.col-md-3 .name {
+  background: #f42;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 11px 16px 11px 84px;
 }
 
 .img-grid1 ul {
@@ -240,6 +245,9 @@ nav img {
 }
 
 @media screen and (min-width: 768px) {
+  .latest-deal {
+    margin: auto 20%;
+  }
   .latest-fundings {
     margin: auto 20%;
     display: -webkit-box;
@@ -275,16 +283,6 @@ nav img {
     position: relative;
     display: inline;
     margin-left: 0.5rem;
-  }
-  .deals {
-    margin-left: 50%;
-    margin-right: 20%;
-    display: inline;
-    padding: auto 5rem;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 250px;
-            flex: 1 1 250px;
-    font-size: 0.8rem;
   }
   .visible2 {
     visibility: hidden;
@@ -403,7 +401,8 @@ nav img {
         -ms-flex: 1 1 25%;
             flex: 1 1 25%;
   }
-  .row {
+  .row,
+  .tech {
     margin: auto 20%;
   }
 }
@@ -430,7 +429,6 @@ nav img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: auto 20%;
 }
 
 .col-md-3 {
@@ -464,8 +462,8 @@ nav img {
       -ms-flex-align: start;
           align-items: flex-start;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
+      -ms-flex: 1 1 400px;
+          flex: 1 1 400px;
 }
 
 .md-4 img {
@@ -491,6 +489,16 @@ nav img {
 .funds-para {
   border-top: 1px solid rgba(255, 68, 34, 0.25);
   padding: 16px;
+}
+
+.funds-para a {
+  text-decoration: none;
+  color: grey;
+}
+
+.funds-meta i + span {
+  text-decoration: none;
+  color: grey;
 }
 
 .section1 {
@@ -524,7 +532,7 @@ nav img {
   grid-column: 2/3;
   -o-object-fit: cover;
      object-fit: cover;
-  width: auto;
+  width: 100%;
   height: 100%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -532,12 +540,10 @@ nav img {
 }
 
 .back-img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 160px;
-          flex: 1 1 160px;
+  width: 100%;
   background-image: url("./image1.jpeg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: 100% 100%;
 }
 
@@ -566,6 +572,7 @@ nav img {
 
 .underline {
   border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+  text-decoration: none;
 }
 
 .apps-gear-tech {
@@ -617,6 +624,15 @@ nav img {
   width: 35%;
 }
 
+.funds-meta {
+  display: inline-block;
+  right: 3rem;
+}
+
+.funds-meta li a {
+  text-decoration: none;
+}
+
 .politics {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -646,9 +662,12 @@ nav img {
   color: #fff;
 }
 
-.funds-meta {
-  display: inline-block;
-  right: 3rem;
+.fa-tags {
+  color: black;
+}
+
+.fa-briefcase {
+  color: black;
 }
 
 .back-col {
@@ -690,7 +709,72 @@ footer {
   text-decoration: none;
 }
 
+.name h4 {
+  background-color: #f42;
+  text-align: center;
+}
+
 .none {
   display: none;
+}
+
+.latest-news {
+  position: relative;
+  margin-left: 20%;
+  font-size: 0.8rem;
+  color: #f42;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.latest-news span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.latest-deal {
+  position: relative;
+  font-size: 0.8rem;
+  color: #f42;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.latest-deal span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.latest-deal .deals {
+  text-decoration: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: auto;
+  color: #f42;
 }
 /*# sourceMappingURL=style.css.map */
