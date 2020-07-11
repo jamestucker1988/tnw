@@ -1,15 +1,25 @@
 @media screen and (max-width: 768px) {
+  .latest-news {
+    font-size: 0.8rem;
+  }
+  .back-img p {
+    font-size: 1.2rem;
+    width: 90%;
+  }
   footer {
     font-size: 0.8rem;
   }
   footer .foot-img {
     width: 15%;
   }
+  .latest-fundings {
+    display: inline-block;
+  }
   .latest-news1 {
-    position: relative;
     color: #f42;
     font-size: 1.2rem;
     text-decoration: none;
+    float: left;
   }
   .latest-news1 span {
     -ms-flex-item-align: center;
@@ -18,21 +28,14 @@
     margin-left: 0.5rem;
     margin-top: 0.2rem;
   }
-  .latest-news1 h3 {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    width: 100%;
-  }
   .latest-deal {
     margin: auto auto;
   }
-  .latest-news1 + .high-five {
-    position: relative;
-    display: block;
+  .high-five {
     color: red;
   }
-  .latest-news1 + .high-five h5:nth-child(2),
-  .latest-news1 + .high-five h5:nth-child(4) {
+  .high-five h5:nth-child(2),
+  .high-five h5:nth-child(4) {
     display: none;
   }
   .visible2 {
@@ -245,6 +248,10 @@ nav img {
 }
 
 @media screen and (min-width: 768px) {
+  .latest-news {
+    margin-left: 20%;
+    font-size: 1.2rem;
+  }
   .latest-deal {
     margin: auto 20%;
   }
@@ -523,6 +530,7 @@ nav img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  text-decoration: none;
   color: #f42;
 }
 
@@ -720,8 +728,6 @@ footer {
 
 .latest-news {
   position: relative;
-  margin-left: 20%;
-  font-size: 0.8rem;
   color: #f42;
   text-decoration: none;
   display: -webkit-box;

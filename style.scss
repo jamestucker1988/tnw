@@ -37,6 +37,16 @@ $width2: 768px;
 }
 
 @media screen and (max-width: 768px) {
+  .latest-news {
+    font-size: 0.8rem;
+  }
+  .back-img {
+    p {
+      font-size: 1.2rem;
+      width: 90%;
+    }
+  }
+
   footer {
     font-size: 0.8rem;
 
@@ -45,21 +55,21 @@ $width2: 768px;
     }
   }
 
+  .latest-fundings {
+    display: inline-block;
+  }
+
   .latest-news1 {
-    position: relative;
     color: #f42;
     font-size: 1.2rem;
     text-decoration: none;
+
+    float: left;
 
     span {
       align-self: center;
       margin-left: 0.5rem;
       margin-top: 0.2rem;
-    }
-
-    h3 {
-      align-self: flex-start;
-      width: 100%;
     }
   }
 
@@ -67,13 +77,7 @@ $width2: 768px;
     margin: auto auto;
   }
 
-  .name {
-  }
-
-  .latest-news1 + .high-five {
-    position: relative;
-    // padding-top: 5rem;
-    display: block;
+  .high-five {
     color: red;
 
     h5:nth-child(2),
@@ -230,6 +234,7 @@ nav {
     color: #fff;
   }
 }
+
 .img-grid1-div2,
 .img-grid1-div3 {
   position: relative;
@@ -267,6 +272,11 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+  .latest-news {
+    margin-left: 20%;
+    font-size: 1.2rem;
+  }
+
   .latest-deal {
     margin: auto 20%;
   }
@@ -276,7 +286,6 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    // position: relative;
   }
 
   .latest-news1 {
@@ -291,12 +300,6 @@ nav {
       margin-left: 0.5rem;
       margin-top: 0.2rem;
     }
-
-    // h3 {
-    //   // align-self: flex-end;
-
-    //   // width: 100%;
-    // }
   }
 
   .high-five {
@@ -425,6 +428,7 @@ nav {
       grid-area: 2/2/3/3;
     }
   }
+
   .col-md-3 {
     flex: 1 1 25%;
   }
@@ -531,7 +535,7 @@ nav {
 
   a {
     grid-column: 1/2;
-
+    text-decoration: none;
     color: #f42;
   }
 
@@ -548,13 +552,12 @@ nav {
 .back-img {
   // flex: 1 1 auto;
   width: 100%;
+
   @include background-img123("./image1.jpeg");
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // background-size: 100% 100%;
 
   p {
     color: #fff;
+    // width: 90%;
   }
 
   p:nth-child(2) {
@@ -700,8 +703,6 @@ footer {
 
 .latest-news {
   position: relative;
-  margin-left: 20%;
-  font-size: 0.8rem;
   color: #f42;
   text-decoration: none;
 
