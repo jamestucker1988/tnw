@@ -333,6 +333,9 @@ nav img {
     -ms-grid-rows: 400px 400px;
         grid-template-rows: 400px 400px;
   }
+  .img-grid2 div {
+    margin-right: 1rem;
+  }
   .img-grid2 div img {
     width: 100%;
   }

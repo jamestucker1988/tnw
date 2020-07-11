@@ -63,7 +63,6 @@ $width2: 768px;
     color: #f42;
     font-size: 1.2rem;
     text-decoration: none;
-
     float: left;
 
     span {
@@ -360,7 +359,9 @@ nav {
 
   .img-grid2 {
     width: inherit;
-
+    div {
+      margin-right: 1rem;
+    }
     & div img {
       @include image-width($width1: 100%);
     }
