@@ -1,4 +1,4 @@
-
+"use strict";
   {
     "extends": ["stylelint-config-standard"],
     "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
