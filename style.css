@@ -230,7 +230,7 @@ nav img {
 }
 
 .img-grid1-div1 .img-grid1 .img-grid1-div1 {
-  background-image: url("/trump.png");
+  background-image: url("./trump.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;

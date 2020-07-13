@@ -143,7 +143,6 @@ $width2: 768px;
       align-self: center;
     }
   }
-
   .img-grid2 {
     & div {
       @include flex1;
@@ -245,7 +244,7 @@ nav {
     @include grid-width768($x: 3, $y: 0);
 
     .img-grid1-div1 {
-      @include background-img123("/trump.png");
+      @include background-img123("./trump.png");
 
       height: 400px;
     }
