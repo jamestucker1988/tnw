@@ -238,8 +238,13 @@ nav img {
       grid-template-columns: repeat(0, 200px);
 }
 
+<<<<<<< HEAD
+.img-grid1-div1 .img-grid1 .img-grid1-div1 {
+  background-image: url("./trump.png");
+=======
 .img-grid1 .img-grid1-div1 {
   background: url("./trump.png");
+>>>>>>> eab29455f6b619270b01e76564d63b9d4fa55c55
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;

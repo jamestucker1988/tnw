@@ -112,6 +112,22 @@ $width2: 768px;
     display: none;
   }
 
+<<<<<<< HEAD
+  nav {
+    display: inline-flex;
+    width: 100%;
+
+    div:nth-child(2) {
+      display: none;
+    }
+
+    .search {
+      margin-left: auto;
+      align-self: center;
+    }
+  }
+=======
+>>>>>>> eab29455f6b619270b01e76564d63b9d4fa55c55
   .img-grid2 {
     & div {
       @include flex1;
@@ -273,8 +289,13 @@ nav {
 .img-grid1 {
   @include grid-width768($x: 3, $y: 0);
 
+<<<<<<< HEAD
+    .img-grid1-div1 {
+      @include background-img123("./trump.png");
+=======
   .img-grid1-div1 {
     @include background-img123("./trump.png");
+>>>>>>> eab29455f6b619270b01e76564d63b9d4fa55c55
 
     height: 400px;
     // background: linear-gradient(to left, #ebf);
