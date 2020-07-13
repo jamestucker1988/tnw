@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  extends: "stylelint-config-standard",
+  extends: "stylelint-config-standard","csstree-validator",
   rules: {
     "at-rule-empty-line-before": [
       "always",
