@@ -149,6 +149,11 @@
   .col-md-3 .name {
     text-align: center;
   }
+  footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .col-md-3 {
@@ -238,13 +243,8 @@ nav img {
       grid-template-columns: repeat(0, 200px);
 }
 
-<<<<<<< HEAD
-.img-grid1-div1 .img-grid1 .img-grid1-div1 {
-  background-image: url("./trump.png");
-=======
 .img-grid1 .img-grid1-div1 {
   background: url("./trump.png");
->>>>>>> eab29455f6b619270b01e76564d63b9d4fa55c55
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -549,18 +549,21 @@ nav img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 2rem;
+  margin: 1.5rem;
 }
 
 .social-links i {
   margin-left: 2rem;
   font-size: 2rem;
+  color: #fff;
 }
 
 .social-links a {
   margin-left: 1rem;
   font-size: 1rem;
   margin-top: -1rem;
+  text-decoration: none;
+  color: grey;
 }
 
 .section1 {
@@ -753,7 +756,7 @@ nav img {
 }
 
 .back-col {
-  background: #555;
+  background: #131313;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -775,8 +778,6 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding: 2rem;
   background: black;
   color: #fff;
@@ -798,5 +799,22 @@ footer {
       align-self: center;
   margin-left: auto;
   color: #f42;
+}
+
+.fa-facebook,
+.fa-twitter-square,
+.fa-youtube,
+.fa-instagram,
+.fa-pinterest,
+.fa-rss-square,
+.fa-envelope-square {
+  color: #131313;
+  background-color: #131313;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
