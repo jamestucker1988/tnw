@@ -218,6 +218,10 @@ nav img {
   color: #fff;
 }
 
+.img-grid1-div1 img {
+  width: 35%;
+}
+
 .img-grid1-div2,
 .img-grid1-div3 {
   position: relative;

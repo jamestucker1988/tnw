@@ -191,9 +191,6 @@ $width2: 768px;
       width: 10%;
     }
   }
-  // .social-links i {
-  //   flex: 1 1 auto;
-  // }
 }
 
 .col-md-3 {
@@ -259,6 +256,10 @@ nav {
   span {
     float: right;
     color: #fff;
+  }
+
+  img {
+    width: 35%;
   }
 }
 
@@ -540,9 +541,6 @@ nav {
 .social-links {
   display: flex;
   justify-content: center;
-
-  // margin-left: 40%;
-  // margin-right: 40%;
 
   i {
     flex-basis: 2.5rem;
