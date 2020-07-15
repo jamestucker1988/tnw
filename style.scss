@@ -48,14 +48,6 @@ $width2: 768px;
     }
   }
 
-  footer {
-    font-size: 0.8rem;
-
-    .foot-img {
-      width: 15%;
-    }
-  }
-
   .latest-fundings {
     display: inline-block;
   }
@@ -88,6 +80,12 @@ $width2: 768px;
 
   .visible2 {
     display: none;
+  }
+
+  .img-grid1-div1 {
+    img {
+      display: none;
+    }
   }
 
   .tech {
@@ -153,8 +151,6 @@ $width2: 768px;
 
       flex: 1 1 50px;
     }
-
-    // margin: 1rem 0;
   }
 
   nav {
@@ -187,14 +183,21 @@ $width2: 768px;
       text-align: center;
     }
   }
+
   footer {
-    justify-content: center;
+    flex-wrap: wrap;
+
+    .foot-img {
+      width: 10%;
+    }
   }
+  // .social-links i {
+  //   flex: 1 1 auto;
+  // }
 }
 
 .col-md-3 {
   box-sizing: border-box;
-  // flex: 1 1 25%;
   padding: 0 2px;
   color: #fff;
   background: #fffaf8;
@@ -210,7 +213,6 @@ $width2: 768px;
 }
 
 .name {
-  // text-align: center;
   background: #f42;
   color: white;
   font-family: "Roboto", sans-serif;
@@ -277,18 +279,17 @@ nav {
   @include grid-width768($x: 3, $y: 0);
 
   .img-grid1-div1 {
-    @include background-img123("./trump.png");
+    @include background-img123("images/trump.png");
 
     height: 400px;
-    // background: linear-gradient(to left, #ebf);
   }
 
   .img-grid1-div2 {
-    @include background-img123("./auto.png");
+    @include background-img123("images/auto.png");
   }
 
   .img-grid1-div3 {
-    @include background-img123("./auto.png");
+    @include background-img123("images/auto.png");
   }
 
   & p {
@@ -298,6 +299,10 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+  .foot-img {
+    width: 3%;
+  }
+
   .latest-news {
     margin-left: 20%;
     font-size: 1.2rem;
@@ -318,9 +323,7 @@ nav {
     color: #f42;
     font-size: 1.2rem;
     text-decoration: none;
-    // display: inline-block;
-    // position: relative;
-    // flex: 1 1 auto;
+
     span {
       align-self: center;
       margin-left: 0.5rem;
@@ -332,11 +335,7 @@ nav {
     position: relative;
     align-self: center;
     margin-left: auto;
-    // margin-right: 20%;
-    // flex: 1 1 auto;
     color: #f42;
-    // display: inline-block;
-    // float: right;
 
     h5 {
       position: relative;
@@ -346,7 +345,6 @@ nav {
   }
 
   .visible2 {
-    //   display:none;
     visibility: hidden;
   }
 
@@ -469,11 +467,9 @@ nav {
 }
 
 .row {
-  // padding-top: 6rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  // margin: auto 20%;
 
   img {
     width: 15%;
@@ -512,9 +508,7 @@ nav {
 .fa-tags::before {
   content: "\f02c";
 }
-// .fa-tags {
-//    display:inline-flex;
-// }
+
 .fa-briefcase::before {
   display: inline;
   content: "\f0b1";
@@ -546,18 +540,21 @@ nav {
 .social-links {
   display: flex;
   justify-content: center;
-  margin: 1.5rem;
+
+  // margin-left: 40%;
+  // margin-right: 40%;
 
   i {
-    margin-left: 2rem;
+    flex-basis: 2.5rem;
     font-size: 2rem;
     color: #fff;
   }
 
   a {
     margin-left: 1rem;
+    padding-right: 0.5rem;
     font-size: 1rem;
-    margin-top: -1rem;
+    margin-top: 1rem;
     text-decoration: none;
     color: grey;
   }
@@ -571,9 +568,7 @@ nav {
   background-color: pink;
 
   p {
-    // float:left;
     grid-column: 1/2;
-    // grid-row:1/2;
     color: #f42;
   }
 
@@ -631,14 +626,12 @@ nav {
 }
 
 .back-img {
-  // flex: 1 1 auto;
   width: 100%;
 
-  @include background-img123("./image1.jpeg");
+  @include background-img123("images/image1.jpeg");
 
   p {
     color: #fff;
-    // width: 90%;
   }
 
   p:nth-child(2) {
@@ -675,15 +668,6 @@ nav {
 .fa-angle-right {
   font-size: 1rem;
   margin-left: 0.5rem;
-}
-
-.foot-img {
-  background-color: black;
-  width: 5%;
-}
-
-.tnw-image {
-  @include image-width(35%);
 }
 
 .tint {
@@ -735,7 +719,6 @@ nav {
 footer {
   display: flex;
   justify-content: center;
-  // flex-wrap: wrap;
   padding: 2rem;
   background: black;
   color: #fff;
@@ -755,7 +738,6 @@ footer {
   align-self: center;
   margin-left: auto;
   color: #f42;
-  // margin-top: 0.2rem;
 }
 
 .fa-facebook,
@@ -767,7 +749,9 @@ footer {
 .fa-envelope-square {
   color: #131313;
   background-color: #131313;
-  flex-grow: 1;
-  flex-shrink: 1;
   font-size: 1rem;
+}
+
+.fa-bars {
+  color: #f42;
 }

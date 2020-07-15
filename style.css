@@ -6,12 +6,6 @@
     font-size: 1.2rem;
     width: 90%;
   }
-  footer {
-    font-size: 0.8rem;
-  }
-  footer .foot-img {
-    width: 15%;
-  }
   .latest-fundings {
     display: inline-block;
   }
@@ -39,6 +33,9 @@
     display: none;
   }
   .visible2 {
+    display: none;
+  }
+  .img-grid1-div1 img {
     display: none;
   }
   .tech {
@@ -150,9 +147,11 @@
     text-align: center;
   }
   footer {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .foot-img {
+    width: 10%;
   }
 }
 
@@ -244,7 +243,7 @@ nav img {
 }
 
 .img-grid1 .img-grid1-div1 {
-  background: url("./trump.png");
+  background: url("images/trump.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -252,14 +251,14 @@ nav img {
 }
 
 .img-grid1 .img-grid1-div2 {
-  background: url("./auto.png");
+  background: url("images/auto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
 
 .img-grid1 .img-grid1-div3 {
-  background: url("./auto.png");
+  background: url("images/auto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -271,6 +270,9 @@ nav img {
 }
 
 @media screen and (min-width: 768px) {
+  .foot-img {
+    width: 3%;
+  }
   .latest-news {
     margin-left: 20%;
     font-size: 1.2rem;
@@ -549,19 +551,20 @@ nav img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1.5rem;
 }
 
 .social-links i {
-  margin-left: 2rem;
+  -ms-flex-preferred-size: 2.5rem;
+      flex-basis: 2.5rem;
   font-size: 2rem;
   color: #fff;
 }
 
 .social-links a {
   margin-left: 1rem;
+  padding-right: 0.5rem;
   font-size: 1rem;
-  margin-top: -1rem;
+  margin-top: 1rem;
   text-decoration: none;
   color: grey;
 }
@@ -654,7 +657,7 @@ nav img {
 
 .back-img {
   width: 100%;
-  background: url("./image1.jpeg");
+  background: url("images/image1.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -697,15 +700,6 @@ nav img {
 .fa-angle-right {
   font-size: 1rem;
   margin-left: 0.5rem;
-}
-
-.foot-img {
-  background-color: black;
-  width: 5%;
-}
-
-.tnw-image {
-  width: 35%;
 }
 
 .tint {
@@ -810,11 +804,10 @@ footer {
 .fa-envelope-square {
   color: #131313;
   background-color: #131313;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
   font-size: 1rem;
+}
+
+.fa-bars {
+  color: #f42;
 }
 /*# sourceMappingURL=style.css.map */
