@@ -1,15 +1,8 @@
-# Project 5 - smashing_magazine_clone
+# Project 5 - The_Next_Web_clone
 
 ​
-This is an assigned project where we were supposed to replicate/clone smashingmagazine page as seen in the link:
-<a href="https://www.smashingmagazine.com/">click here</a>
-​
-​
-
-## Preview of our webpage
-
-### Top of the webpage
-
+This is an assigned project where we were supposed to replicate/clone theNextweb page as seen in the link:
+<a href="https://thenextweb.com/">click here</a>
 ​
 ![screenshot 1](images/screen.jpg)
 ​

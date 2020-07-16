@@ -37,6 +37,12 @@ $width2: 768px;
 }
 
 @media screen and (max-width: 768px) {
+  .cycle {
+    width: 4%;
+    left: 94%;
+    bottom: 7%;
+  }
+
   .latest-news {
     font-size: 0.8rem;
   }
@@ -184,7 +190,7 @@ $width2: 768px;
     }
   }
 
-  footer {
+  .footer {
     flex-wrap: wrap;
 
     .foot-img {
@@ -300,6 +306,13 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+  .cycle {
+    border-radius: 16px;
+    width: 2%;
+    left: 95%;
+    bottom: 3%;
+  }
+
   .foot-img {
     width: 3%;
   }
@@ -395,8 +408,8 @@ nav {
 
     margin: auto 20%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: 400px 400px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 300px 300px;
 
     div a {
       text-align: center;
@@ -542,19 +555,13 @@ nav {
   display: flex;
   justify-content: center;
 
-  i {
-    flex-basis: 2.5rem;
-    font-size: 2rem;
-    color: #fff;
+  div {
+    flex-basis: 4rem;
   }
 
-  a {
-    margin-left: 1rem;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    margin-top: 1rem;
-    text-decoration: none;
-    color: grey;
+  div a i {
+    font-size: 1.5rem;
+    color: #fff;
   }
 }
 
@@ -585,8 +592,27 @@ nav {
   }
 }
 
+.margin-social {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+
+  a {
+    flex-basis: 5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: grey;
+  }
+}
+
 .funds-meta li a {
   text-decoration: none;
+}
+
+.magin-social {
+  a:nth-child(4) {
+    flex-basis: 5rem;
+  }
 }
 
 .latest-deal {
@@ -602,14 +628,6 @@ nav {
     align-self: center;
     margin-left: 0.5rem;
     margin-top: 0.2rem;
-  }
-
-  .margin-social {
-    margin-bottom: 2rem;
-
-    a {
-      text-decoration: none;
-    }
   }
 }
 
@@ -707,14 +725,10 @@ nav {
 
 .back-col {
   background: #131313;
-
-  @include coll;
-
-  justify-content: center;
-  flex-wrap: wrap;
+  padding: 3rem;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: center;
   padding: 2rem;
@@ -738,18 +752,27 @@ footer {
   color: #f42;
 }
 
-.fa-facebook,
+.fa-facebook-square,
 .fa-twitter-square,
-.fa-youtube,
-.fa-instagram,
-.fa-pinterest,
+.fa-youtube-square,
+.fa-instagram-square,
+.fa-pinterest-square,
 .fa-rss-square,
 .fa-envelope-square {
-  color: #131313;
-  background-color: #131313;
-  font-size: 1rem;
+  background: #333;
 }
 
 .fa-bars {
   color: #f42;
+}
+
+.logoStackPath {
+  width: 5rem;
+  margin-left: 0.3rem;
+}
+
+.cycle {
+  z-index: 1;
+  position: fixed;
+  background: #146ff8;
 }

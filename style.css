@@ -1,4 +1,9 @@
 @media screen and (max-width: 768px) {
+  .cycle {
+    width: 4%;
+    left: 94%;
+    bottom: 7%;
+  }
   .latest-news {
     font-size: 0.8rem;
   }
@@ -146,11 +151,11 @@
   .col-md-3 .name {
     text-align: center;
   }
-  footer {
+  .footer {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  footer .foot-img {
+  .footer .foot-img {
     width: 10%;
   }
 }
@@ -274,6 +279,12 @@ nav img {
 }
 
 @media screen and (min-width: 768px) {
+  .cycle {
+    border-radius: 16px;
+    width: 2%;
+    left: 95%;
+    bottom: 3%;
+  }
   .foot-img {
     width: 3%;
   }
@@ -359,10 +370,10 @@ nav img {
     margin: auto 20%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    -ms-grid-rows: 400px 400px;
-        grid-template-rows: 400px 400px;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    -ms-grid-rows: 300px 300px;
+        grid-template-rows: 300px 300px;
   }
   .img-grid2 div {
     margin-right: 1rem;
@@ -557,20 +568,14 @@ nav img {
           justify-content: center;
 }
 
-.social-links i {
-  -ms-flex-preferred-size: 2.5rem;
-      flex-basis: 2.5rem;
-  font-size: 2rem;
-  color: #fff;
+.social-links div {
+  -ms-flex-preferred-size: 4rem;
+      flex-basis: 4rem;
 }
 
-.social-links a {
-  margin-left: 1rem;
-  padding-right: 0.5rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-  text-decoration: none;
-  color: grey;
+.social-links div a i {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 .section1 {
@@ -612,8 +617,31 @@ nav img {
   grid-row: 1/3;
 }
 
+.margin-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.margin-social a {
+  -ms-flex-preferred-size: 5rem;
+      flex-basis: 5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: grey;
+}
+
 .funds-meta li a {
   text-decoration: none;
+}
+
+.magin-social a:nth-child(4) {
+  -ms-flex-preferred-size: 5rem;
+      flex-basis: 5rem;
 }
 
 .latest-deal {
@@ -639,14 +667,6 @@ nav img {
       align-self: center;
   margin-left: 0.5rem;
   margin-top: 0.2rem;
-}
-
-.latest-deal .margin-social {
-  margin-bottom: 2rem;
-}
-
-.latest-deal .margin-social a {
-  text-decoration: none;
 }
 
 .funds-meta {
@@ -755,21 +775,10 @@ nav img {
 
 .back-col {
   background: #131313;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  padding: 3rem;
 }
 
-footer {
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -799,19 +808,28 @@ footer {
   color: #f42;
 }
 
-.fa-facebook,
+.fa-facebook-square,
 .fa-twitter-square,
-.fa-youtube,
-.fa-instagram,
-.fa-pinterest,
+.fa-youtube-square,
+.fa-instagram-square,
+.fa-pinterest-square,
 .fa-rss-square,
 .fa-envelope-square {
-  color: #131313;
-  background-color: #131313;
-  font-size: 1rem;
+  background: #333;
 }
 
 .fa-bars {
   color: #f42;
+}
+
+.logoStackPath {
+  width: 5rem;
+  margin-left: 0.3rem;
+}
+
+.cycle {
+  z-index: 1;
+  position: fixed;
+  background: #146ff8;
 }
 /*# sourceMappingURL=style.css.map */
