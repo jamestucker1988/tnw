@@ -38,7 +38,6 @@
 }
 
 .md-4 a {
-  max-width: 90%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   text-decoration: none;
@@ -117,6 +116,12 @@ nav img {
 
 .col-md-3 a li {
   list-style: none;
+}
+
+.col-md-3-img {
+  position: absolute;
+  top: 1rem;
+  z-index: 1;
 }
 
 .img-grid1-div2 {
@@ -273,9 +278,6 @@ nav img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .nav-pre {
@@ -363,8 +365,19 @@ nav img {
 .funds {
   background: rgba(255, 68, 34, 0.08);
   color: black;
-  margin: 0;
-  padding: 11px 16px 11px 84px;
+  text-align: center;
+  display: block;
+}
+
+.m {
+  position: relative;
+  display: inline-block;
+}
+
+.m1 {
+  font-size: 0.8rem !important;
+  color: grey;
+  display: block;
 }
 
 .fa-tags::before {
@@ -450,7 +463,6 @@ nav img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: auto 15%;
 }
 
 .latest-deal span {
@@ -471,25 +483,55 @@ nav img {
   color: grey;
 }
 
+.p {
+  vertical-align: bottom;
+  top: 90%;
+}
+
+.writer {
+  font-size: 0.6rem;
+}
+
 .back-img {
   width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  line-height: 0.8rem;
   background: url("images/image1.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
 
-.back-img p {
+.back-img div p {
   color: #fff;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  font-size: 0.6rem;
+  margin-top: auto;
+  line-height: 2px;
 }
 
-.back-img p:nth-child(2) {
-  font-size: 1.2rem;
+.back-img div a:nth-child(2) {
+  font-size: 1rem;
+  color: #fff;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  display: block;
 }
 
-.back-img p:nth-child(3) {
+.back-img div a:nth-child(3) {
   font-size: 0.8rem;
-  color: grey;
+  color: #fff;
 }
 
 .fa-circle {
@@ -509,7 +551,7 @@ nav img {
 
 .apps-gear-tech {
   font-size: 1.5rem;
-  display: inline-block;
+  display: block;
   color: #f42;
 }
 
@@ -560,7 +602,6 @@ nav img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-left: auto;
   color: #f42;
 }
 
@@ -599,8 +640,9 @@ nav img {
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  padding: 11px 16px 11px 84px;
   text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
 }
 
 .img-grid1 ul {
@@ -802,13 +844,8 @@ nav img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .col-md-3 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-  .col-md-3 .name {
-    text-align: center;
+  .col-md-3-img {
+    max-width: 10%;
   }
   .row div:nth-child(4) {
     display: none;
@@ -840,8 +877,8 @@ nav img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 90%;
-            flex: 1 1 90%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
   .nav-pre {
     display: none;
@@ -855,11 +892,13 @@ nav img {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .tnw-image1 {
+    display: none;
+  }
   .search {
     margin-left: auto;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
   .anchor {
     display: inline;
@@ -1002,8 +1041,8 @@ nav img {
     margin-left: 10%;
     font-size: 1.2rem !important;
   }
-  .deal {
-    margin-right: 10%;
+  .deals {
+    margin-right: 11.5%;
     font-size: 1.2rem !important;
   }
   .anchor {
