@@ -257,6 +257,16 @@ nav {
 .politics {
   position: relative;
 
+  @include coll;
+
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 20rem;
+
+  img {
+    position: relative;
+  }
+
   div {
     position: absolute;
     top: 40%;
@@ -272,17 +282,6 @@ nav {
       font-weight: bold;
       color: #fff;
     }
-  }
-}
-.politics {
-  @include coll;
-
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding-top: 20rem;
-
-  img {
-    position: relative;
   }
 }
 
@@ -674,7 +673,7 @@ nav {
 
     div {
       position: absolute;
-      top: 80%;
+      top: 78%;
 
       .a1 {
         font-size: 28px;
@@ -699,6 +698,24 @@ nav {
       .by2 {
         line-height: 5px;
       }
+    }
+  }
+
+  .tech {
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin: 0;
+
+    img {
+      flex: 1 1 auto;
+    }
+
+    a {
+      flex: 1 1 auto;
+      max-width: 80%;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -784,24 +801,6 @@ nav {
   .img-grid1-div1 {
     img {
       display: none;
-    }
-  }
-
-  .tech {
-    flex-direction: column;
-    justify-content: center;
-    font-size: 0.8rem;
-    margin: 0;
-
-    img {
-      flex: 1 1 auto;
-    }
-
-    a {
-      flex: 1 1 auto;
-      max-width: 80%;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
     }
   }
 
@@ -916,6 +915,16 @@ nav {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .anchor {
+    padding: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: grey;
+      padding: 0.5rem;
+    }
+  }
+
   .img-grid1-div2,
   .img-grid1-div3 {
     position: relative;
@@ -970,16 +979,6 @@ nav {
   .search1 {
     margin-left: auto;
     align-self: flex-end;
-  }
-
-  .anchor {
-    padding: 0.5rem;
-
-    a {
-      text-decoration: none;
-      color: grey;
-      padding: 0.5rem;
-    }
   }
 
   .fa-bars {
@@ -1047,6 +1046,16 @@ nav {
 }
 
 @media (min-width: 1024px) {
+  .anchor {
+    padding: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: grey;
+      padding: 0.5rem;
+    }
+  }
+
   .img-grid1-div2,
   .img-grid1-div3 {
     position: relative;
@@ -1070,6 +1079,7 @@ nav {
       }
     }
   }
+
   .politics {
     div {
       top: 81%;
@@ -1115,16 +1125,6 @@ nav {
   .deals {
     margin-right: 11.5%;
     font-size: 1.2rem !important;
-  }
-
-  .anchor {
-    padding: 0.5rem;
-
-    a {
-      text-decoration: none;
-      color: grey;
-      padding: 0.5rem;
-    }
   }
 
   .none {

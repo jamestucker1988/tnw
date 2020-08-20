@@ -240,26 +240,6 @@ nav {
 
 .politics {
   position: relative;
-}
-
-.politics div {
-  position: absolute;
-  top: 40%;
-  margin-left: 0.5rem;
-}
-
-.politics div a {
-  text-decoration: none;
-}
-
-.politics div .a2 {
-  font-size: 54px;
-  line-height: 4rem;
-  font-weight: bold;
-  color: #fff;
-}
-
-.politics {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,6 +258,23 @@ nav {
 
 .politics img {
   position: relative;
+}
+
+.politics div {
+  position: absolute;
+  top: 40%;
+  margin-left: 0.5rem;
+}
+
+.politics div a {
+  text-decoration: none;
+}
+
+.politics div .a2 {
+  font-size: 54px;
+  line-height: 4rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .row {
@@ -734,7 +731,7 @@ nav {
   .img-grid1-div2 div,
   .img-grid1-div3 div {
     position: absolute;
-    top: 80%;
+    top: 78%;
   }
   .img-grid1-div2 div .a1,
   .img-grid1-div3 div .a1 {
@@ -755,6 +752,30 @@ nav {
   }
   .politics div .by2 {
     line-height: 5px;
+  }
+  .tech {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .tech img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .tech a {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: 80%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   nav {
     display: -webkit-box;
@@ -830,30 +851,6 @@ nav {
   }
   .img-grid1-div1 img {
     display: none;
-  }
-  .tech {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 0.8rem;
-    margin: 0;
-  }
-  .tech img {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-  }
-  .tech a {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-    max-width: 80%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
   }
   .img-grid2 {
     display: -webkit-box;
@@ -978,6 +975,14 @@ nav {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .anchor {
+    padding: 0.5rem;
+  }
+  .anchor a {
+    text-decoration: none;
+    color: grey;
+    padding: 0.5rem;
+  }
   .img-grid1-div2,
   .img-grid1-div3 {
     position: relative;
@@ -1037,14 +1042,6 @@ nav {
     margin-left: auto;
     -ms-flex-item-align: end;
         align-self: flex-end;
-  }
-  .anchor {
-    padding: 0.5rem;
-  }
-  .anchor a {
-    text-decoration: none;
-    color: grey;
-    padding: 0.5rem;
   }
   .fa-bars {
     display: none;
@@ -1126,6 +1123,14 @@ nav {
 }
 
 @media (min-width: 1024px) {
+  .anchor {
+    padding: 0.5rem;
+  }
+  .anchor a {
+    text-decoration: none;
+    color: grey;
+    padding: 0.5rem;
+  }
   .img-grid1-div2,
   .img-grid1-div3 {
     position: relative;
@@ -1185,14 +1190,6 @@ nav {
   .deals {
     margin-right: 11.5%;
     font-size: 1.2rem !important;
-  }
-  .anchor {
-    padding: 0.5rem;
-  }
-  .anchor a {
-    text-decoration: none;
-    color: grey;
-    padding: 0.5rem;
   }
   .none {
     display: none;
