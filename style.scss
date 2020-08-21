@@ -110,19 +110,6 @@ nav {
 }
 
 .high-five {
-  position: relative;
-  align-self: center;
-  margin-left: auto;
-  color: #f42;
-  font-weight: bold;
-  font-size: 1.2rem;
-
-  h5 {
-    position: relative;
-    display: inline;
-    margin-left: 0.5rem;
-    font-weight: bold;
-  }
 }
 
 .md-4 a {
@@ -652,9 +639,7 @@ nav {
   height: 25px;
   text-align: left;
   font-size: 0.9rem !important;
-  padding-left: 1rem;
   padding-top: 0.5rem;
-  vertical-align: middle;
 }
 
 .ap {
@@ -775,23 +760,25 @@ nav {
     }
   }
 
-  .latest-deal {
-    margin: auto auto;
+  .high-five {
+    align-self: flex-start;
+    margin-left: 0 !important;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #f42;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    h5 {
+      position: relative;
+      display: inline;
+      margin-left: 0.5rem;
+      font-weight: bold;
+    }
   }
 
-  .high-five {
-    color: red;
-
-    h5:nth-child(2),
-    h5:nth-child(4) {
-      display: none;
-    }
-
-    h5:nth-child(1),
-    h5:nth-child(3),
-    h5:nth-child(5) {
-      display: block;
-    }
+  .latest-deal {
+    margin: auto auto;
   }
 
   .visible2 {
@@ -1020,15 +1007,26 @@ nav {
   }
 
   .latest-fundings {
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
   }
 
   .high-five {
+    color: red;
     align-self: flex-start;
-    margin-left: 0 !important;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+
+    h5:nth-child(2),
+    h5:nth-child(4) {
+      display: none;
+    }
+
+    h5:nth-child(1),
+    h5:nth-child(3),
+    h5:nth-child(5) {
+      display: block;
+    }
   }
 
   .row div:nth-child(4) {
@@ -1110,6 +1108,19 @@ nav {
 
   .high-five {
     margin-right: 10%;
+    position: relative;
+    align-self: center;
+    margin-left: auto;
+    color: #f42;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    h5 {
+      position: relative;
+      display: inline;
+      margin-left: 0.5rem;
+      font-weight: bold;
+    }
   }
 
   .tech,
