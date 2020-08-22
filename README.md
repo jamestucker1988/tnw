@@ -4,9 +4,9 @@
 This is an assigned project where we were supposed to replicate/clone theNextweb page as seen in the link:
 <a href="https://thenextweb.com/">click here</a>
 ​
-![screenshot 1](images/screen1.png)
-​![screenshot 1](images/screen2.png)
-![screenshot 1](images/screen3.png)
+![screenshot 1](images/scree4.png)
+​![screenshot 1](images/screen5.png)
+![screenshot 1](images/screen6.png)
 
 ## Built With
 
