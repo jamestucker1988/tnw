@@ -1,0 +1,1160 @@
+$width2: 768px;
+
+body {
+  margin-top: -8px;
+}
+
+nav {
+  display: flex;
+}
+
+@mixin flex1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+@mixin image-width($width1) {
+  width: $width1;
+}
+
+@mixin coll {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin grid-width768($x, $y) {
+  @include image-width(100%);
+
+  display: grid;
+  grid-template-rows: repeat($x, 1fr);
+  grid-template-columns: repeat($y, 1fr);
+}
+
+@mixin grid-width-max768 {
+  @include image-width(100%);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 230px 1fr 230px;
+  gap: 0.5rem;
+}
+
+@mixin grid-width-min768 {
+  @include image-width(100%);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 150px 1fr 150px;
+  gap: 0.5rem;
+}
+
+@mixin background-img123($url1) {
+  background: url("#{$url1}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.foot-img {
+  width: 3%;
+}
+
+.a1 {
+  display: block;
+  top: 100%;
+  cursor: text;
+  font-size: 0.8rem;
+}
+
+.writer {
+  font-size: 0.8rem;
+  display: block;
+}
+
+.back-img {
+  width: 100%;
+  height: 200px;
+  font-size: 1.3rem;
+  position: relative;
+  line-height: 0.5rem;
+
+  @include background-img123("images/image1.jpeg");
+}
+
+.most {
+  position: relative;
+  max-width: 80%;
+  top: 50%;
+
+  a {
+    color: #fff;
+  }
+}
+
+.latest-fundings {
+  display: flex;
+}
+
+.latest-news1 {
+  color: #f42;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+
+  span {
+    align-self: center;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+  }
+}
+
+.md-4 a {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.section1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  font-size: 1rem;
+  background-color: pink;
+
+  p {
+    grid-column: 1/2;
+    color: #f42;
+  }
+
+  a {
+    grid-column: 1/2;
+    text-decoration: none;
+    color: #f42;
+  }
+
+  img {
+    grid-column: 2/3;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    grid-row: 1/3;
+  }
+}
+
+.col-md-3 {
+  flex: 1 1 25%;
+  box-sizing: border-box;
+  padding: 0 2px;
+  color: #fff;
+  background: #fffaf8;
+  position: relative;
+  height: 417px;
+
+  a {
+    text-decoration: none;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.margin-social {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+
+  a {
+    flex-basis: 5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: grey;
+  }
+}
+
+.col-md-3-img {
+  position: absolute;
+  top: 1rem;
+  z-index: 1;
+}
+
+.by {
+  display: block;
+  position: relative;
+}
+
+.by2 {
+  display: block;
+  position: relative;
+  line-height: 15rem;
+}
+
+.collective {
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  color: hsla(0, 0%, 100%, 0.6);
+  text-decoration: none;
+}
+
+.ago {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.hour,
+.share {
+  display: inline-block;
+  position: relative;
+  color: hsla(0, 0%, 100%, 0.6);
+
+  .material-icons {
+    vertical-align: middle;
+    color: hsla(0, 0%, 100%, 0.6);
+  }
+}
+
+.img-grid1-div2,
+.img-grid1-div3 {
+  position: relative;
+  display: block;
+
+  div {
+    position: absolute;
+    top: 66%;
+    margin-left: 0.5rem;
+
+    a {
+      position: relative;
+      text-decoration: none;
+    }
+
+    .a1 {
+      font-size: 32px;
+      line-height: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+
+.politics {
+  position: relative;
+
+  @include coll;
+
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 20rem;
+
+  img {
+    position: relative;
+  }
+
+  div {
+    position: absolute;
+    top: 40%;
+    margin-left: 0.5rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    .a2 {
+      font-size: 54px;
+      line-height: 4rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+
+.row {
+  display: flex;
+
+  img {
+    width: 15%;
+  }
+}
+
+.funds-meta li a {
+  text-decoration: none;
+}
+
+.col-md-4 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto 1%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-basis: 30%;
+
+  img {
+    max-width: 95%;
+  }
+}
+
+.img-grid1-div1 {
+  font-size: 100%;
+
+  span {
+    float: right;
+    color: #fff;
+  }
+
+  img {
+    width: 35%;
+  }
+}
+
+.img-grid2 {
+  margin: 0 10%;
+
+  .wrapper-div {
+    flex-basis: 23%;
+    margin-right: 1%;
+
+    img {
+      @include image-width($width1: 100%);
+
+      height: 135px;
+    }
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .text-div a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+  }
+
+  .ap a {
+    color: grey;
+  }
+}
+
+.nav-adj {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-pre {
+  display: flex;
+  background-color: black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  justify-content: space-evenly;
+  font-size: 0.9rem;
+
+  .div2 {
+    margin-left: auto;
+
+    a {
+      padding: 0.5rem;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .div1 {
+    margin-right: auto;
+
+    a {
+      text-decoration: none;
+      padding: 0.5rem;
+      color: #fff;
+    }
+  }
+}
+
+.img-grid1 {
+  .img-grid1-div1 {
+    background-image: url("images/trump.png"), linear-gradient(#e66465, #9198e5);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+  .img-grid1-div2 {
+    @include background-img123("images/auto.png");
+  }
+
+  .img-grid1-div3 {
+    @include background-img123("images/auto.png");
+  }
+
+  & p {
+    text-align: center;
+    color: white;
+  }
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.funds {
+  background: rgba(255, 68, 34, 0.08);
+  color: black;
+  text-align: center;
+  display: block;
+}
+
+.m {
+  position: relative;
+  display: inline-block;
+}
+
+.m1 {
+  font-size: 0.8rem !important;
+  color: grey;
+  display: block;
+}
+
+.fa-tags::before {
+  content: "\f02c";
+}
+
+.fa-briefcase::before {
+  display: inline;
+  content: "\f0b1";
+}
+
+.funds-para {
+  border-top: 1px solid rgba(255, 68, 34, 0.25);
+  padding: 16px;
+
+  p {
+    color: grey;
+  }
+}
+
+.latest-news {
+  margin-left: 10%;
+  font-size: 1.2rem;
+  position: relative;
+  color: #f42;
+  text-decoration: none;
+
+  @include flex1;
+
+  span {
+    align-self: center;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+
+  div {
+    flex-basis: 4rem;
+  }
+
+  div a i {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}
+
+.magin-social {
+  a:nth-child(4) {
+    flex-basis: 5rem;
+  }
+}
+
+.latest-deal {
+  position: relative;
+  font-size: 1.2rem;
+  color: #f42;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  span {
+    align-self: center;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+  }
+}
+
+.funds-meta {
+  i + span {
+    text-decoration: none;
+    color: grey;
+  }
+
+  display: inline-block;
+  right: 3rem;
+}
+
+.fa-circle {
+  font-size: 0.4rem;
+  color: #f42;
+}
+
+.lorem {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.underline {
+  border-bottom: 2px solid hsla(0, 0%, 50%, 0.2);
+  text-decoration: none;
+}
+
+.apps-gear-tech {
+  font-size: 1.5rem;
+  display: block;
+  color: #f42;
+}
+
+.fa-angle-right {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.trump {
+  position: relative;
+}
+
+.fa-tags {
+  color: black;
+}
+
+.fa-briefcase {
+  color: black;
+}
+
+.back-col {
+  background: #131313;
+  padding: 3rem;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: black;
+  color: #fff;
+  text-align: center;
+  margin: -8px;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.deals {
+  text-decoration: none;
+  align-self: center;
+  color: #f42;
+  font-size: 1.2rem;
+}
+
+.fa-facebook-square,
+.fa-twitter-square,
+.fa-youtube-square,
+.fa-instagram-square,
+.fa-pinterest-square,
+.fa-rss-square,
+.fa-envelope-square {
+  border: 8px solid black;
+  border-radius: 100%;
+}
+
+.fa-bars {
+  color: #f42;
+  font-size: 1.4rem;
+  width: 1rem;
+}
+
+.fa-search {
+  color: grey;
+  width: 1rem;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.logoStackPath {
+  width: 5rem;
+  margin-left: 0.3rem;
+}
+
+.cycle {
+  z-index: 1;
+  position: fixed;
+  background: #146ff8;
+  border-radius: 16px;
+  width: 2%;
+  left: 95%;
+  bottom: 3%;
+}
+
+.name {
+  background: #f42;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.most a:nth-child(2) {
+  line-height: 1.2rem !important;
+}
+
+.img-grid1 ul {
+  display: inline-flex;
+  position: relative;
+  list-style: none;
+  font-size: 0.8rem;
+
+  li {
+    margin: auto 1rem;
+  }
+}
+
+.after-nav {
+  @include image-width(100%);
+
+  background-color: yellow;
+  height: 25px;
+  text-align: left;
+  font-size: 0.9rem !important;
+  padding-top: 0.5rem;
+}
+
+.ap {
+  color: grey;
+}
+
+.search1 {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .img-grid1-div2,
+  .img-grid1-div3 {
+    position: relative;
+    display: block;
+
+    div {
+      position: absolute;
+      top: 78%;
+
+      .a1 {
+        font-size: 28px;
+        line-height: 1.2rem;
+      }
+    }
+  }
+
+  .politics {
+    position: relative;
+    display: block;
+
+    div {
+      position: absolute;
+      top: 74%;
+
+      .a2 {
+        font-size: 28px;
+        line-height: 1.4rem;
+      }
+
+      .by2 {
+        line-height: 5px;
+      }
+    }
+  }
+
+  .tech {
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin: 0;
+
+    img {
+      flex: 1 1 auto;
+    }
+
+    a {
+      flex: 1 1 auto;
+      max-width: 80%;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  nav {
+    display: flex;
+
+    .search1 {
+      margin-left: auto;
+      align-self: flex-end;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .none {
+    display: none;
+  }
+
+  .img-grid1 {
+    @include grid-width768($x: 3, $y: 0);
+  }
+
+  .cycle {
+    width: 4%;
+    right: 0;
+    bottom: 0;
+  }
+
+  .latest-news {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .back-img {
+    p {
+      font-size: 1.2rem;
+      width: 90%;
+    }
+  }
+
+  .latest-fundings {
+    display: inline-block;
+  }
+
+  .latest-news1 {
+    color: #f42;
+    font-size: 1.2rem;
+    text-decoration: none;
+    float: left;
+
+    span {
+      align-self: center;
+      margin-left: 0.5rem;
+      margin-top: 0.2rem;
+    }
+  }
+
+  .high-five {
+    align-self: flex-start;
+    margin-left: 0 !important;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #f42;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    h5 {
+      position: relative;
+      display: inline;
+      margin-left: 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .latest-deal {
+    margin: auto auto;
+  }
+
+  .visible2 {
+    display: none;
+  }
+
+  .img-grid1-div1 {
+    img {
+      display: none;
+    }
+  }
+
+  .img-grid2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    .wrapper-div {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-basis: 1%;
+
+      img {
+        @include image-width($width1: 10%);
+
+        height: 75px;
+        flex-basis: 75px;
+      }
+
+      .text-div {
+        flex-basis: 90%;
+        display: flex;
+        flex-direction: column;
+
+        a {
+          align-self: flex-start;
+          text-align: left;
+          margin-left: 0.6rem;
+
+          @include image-width($width1: 100%);
+
+          color: black;
+          text-decoration: none;
+        }
+
+        .ap {
+          margin-bottom: 0.5rem;
+        }
+
+        .ap p {
+          display: inline-block;
+          margin-left: 0.4rem;
+        }
+
+        .ap a {
+          color: grey;
+        }
+      }
+    }
+  }
+
+  .name {
+    text-decoration: none;
+
+    h4 {
+      background-color: #f42;
+      text-align: center;
+    }
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-3-img {
+    max-width: 10%;
+  }
+
+  .row div:nth-child(4) {
+    display: none;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+
+    .foot-img {
+      width: 10%;
+    }
+  }
+
+  .tnw {
+    display: flex;
+  }
+
+  .background-color {
+    background: linear-gradient(to bottom right, #c09, #f42 85%);
+    background-blend-mode: multiply;
+    flex: 1 1 25%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-adj {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .nav-pre {
+    display: none;
+  }
+
+  .none1 {
+    display: none;
+  }
+
+  .tnw-image {
+    max-width: 80%;
+    padding: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .anchor {
+    padding: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: grey;
+      padding: 0.5rem;
+    }
+  }
+
+  .img-grid1-div2,
+  .img-grid1-div3 {
+    position: relative;
+    display: block;
+
+    div {
+      position: absolute;
+      top: 65%;
+
+      .a1 {
+        font-size: 24px;
+        line-height: 0.9rem;
+      }
+    }
+  }
+
+  .img-grid1 {
+    @include grid-width-min768;
+
+    .img-grid1-div1 {
+      grid-area: 1/1/-1/2;
+    }
+
+    .img-grid1-div2 {
+      grid-area: 1/2/3/3;
+    }
+
+    .img-grid1-div3 {
+      grid-area: 3/2/-1/3;
+    }
+  }
+
+  .politics {
+    div {
+      top: 64%;
+
+      .a2 {
+        font-size: 40px;
+        line-height: 1.8rem;
+      }
+
+      .by2 {
+        line-height: 3.6rem;
+      }
+    }
+  }
+
+  .tnw-image1 {
+    display: none;
+  }
+
+  .search1 {
+    margin-left: auto;
+    align-self: flex-end;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .tnw {
+    display: flex;
+  }
+
+  .background-color {
+    background: linear-gradient(to bottom right, #c09, #f42 85%);
+    flex: 1 1 10%;
+    width: 10%;
+    display: flex;
+  }
+
+  .nav-adj {
+    display: flex;
+    flex: 1 1 90%;
+  }
+
+  .tnw-image {
+    width: 100%;
+  }
+
+  .img-grid2 {
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .wrapper-div {
+      flex-basis: 32%;
+    }
+  }
+
+  .latest-news {
+    margin: 0;
+  }
+
+  .latest-fundings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .high-five {
+    color: red;
+    align-self: flex-start;
+    font-size: 1.4rem;
+
+    h5:nth-child(2),
+    h5:nth-child(4) {
+      display: none;
+    }
+
+    h5:nth-child(1),
+    h5:nth-child(3),
+    h5:nth-child(5) {
+      display: block;
+    }
+  }
+
+  .row div:nth-child(4) {
+    display: none;
+  }
+
+  .tech {
+    display: flex;
+    flex-wrap: wrap;
+
+    .col-md-4 {
+      flex-basis: 47%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .anchor {
+    padding: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: grey;
+      padding: 0.5rem;
+    }
+  }
+
+  .img-grid1-div2,
+  .img-grid1-div3 {
+    position: relative;
+    display: block;
+
+    div {
+      position: absolute;
+      top: 72%;
+      margin-left: 0.5rem;
+
+      a {
+        position: relative;
+        text-decoration: none;
+      }
+
+      .a1 {
+        font-size: 32px;
+        line-height: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+  }
+
+  .politics {
+    div {
+      top: 81%;
+
+      .a2 {
+        font-size: 54px;
+        line-height: 2.2rem;
+      }
+
+      .by2 {
+        line-height: 2.8rem;
+      }
+    }
+  }
+
+  .search1 {
+    margin-left: auto;
+    align-self: center;
+
+    .fa-bars {
+      display: none;
+    }
+  }
+
+  .latest-news1 {
+    margin-left: 10%;
+  }
+
+  .high-five {
+    margin-right: 10%;
+    position: relative;
+    align-self: center;
+    margin-left: auto;
+    color: #f42;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    h5 {
+      position: relative;
+      display: inline;
+      margin-left: 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .tech,
+  .row {
+    margin: 0 10%;
+  }
+
+  .latest-deal {
+    margin-left: 10%;
+    font-size: 1.2rem !important;
+  }
+
+  .deals {
+    margin-right: 11.5%;
+    font-size: 1.2rem !important;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .img-grid1 {
+    @include grid-width-max768;
+
+    position: relative;
+    height: auto;
+
+    div:first-child {
+      grid-area: 1/1/-1/2;
+    }
+
+    div:nth-child(2) {
+      grid-area: 1/2/3/3;
+    }
+
+    div:last-child {
+      grid-area: 3/2/-1/3;
+    }
+  }
+}
